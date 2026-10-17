@@ -1,0 +1,43 @@
+{
+  "transaction_rows": 986771,
+  "spatially_classified_rows": 971501,
+  "all_six_queries_passed": true,
+  "queries": {
+    "Q1": {
+      "rows": 48,
+      "independent_csv_calculation_passed": true,
+      "indexed_output_identical": true,
+      "max_difference_before_rounding": 0.004860417825966579
+    },
+    "Q2": {
+      "rows": 102,
+      "independent_csv_calculation_passed": true,
+      "indexed_output_identical": true,
+      "max_difference_before_rounding": 0.004903818507955293
+    },
+    "Q3": {
+      "rows": 369,
+      "independent_csv_calculation_passed": true,
+      "indexed_output_identical": true,
+      "max_difference_before_rounding": 0.004722091380116922
+    },
+    "Q4": {
+      "rows": 131,
+      "independent_csv_calculation_passed": true,
+      "indexed_output_identical": true,
+      "max_difference_before_rounding": 0.004986611131787555
+    },
+    "Q5": {
+      "rows": 56,
+      "independent_csv_calculation_passed": true,
+      "indexed_output_identical": true,
+      "max_difference_before_rounding": 0.004967320244759321
+    },
+    "Q6": {
+      "rows": 20,
+      "independent_csv_calculation_passed": true,
+      "indexed_output_identical": true,
+      "max_difference_before_rounding": 0.04888696063926545
+    }
+  }
+}

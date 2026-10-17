@@ -1,0 +1,142 @@
+[
+  {
+    "stage": 1,
+    "transaction_rows": 287196,
+    "relation_bytes": 101244928,
+    "database_bytes": 109789711,
+    "load_seconds": 6.045125300006475,
+    "validation": {
+      "Q1_rows": 48,
+      "Q2_rows": 64,
+      "Q3_rows": 99,
+      "Q4_rows": 103,
+      "Q5_rows": 15,
+      "Q6_rows": 20,
+      "q5_towns_above_budget": 14,
+      "all_sale_towns": 26,
+      "q2_transaction_total": 287196,
+      "nearest_block_rows": 5725,
+      "q1_transaction_total": 77877
+    },
+    "mean_execution_ms": {
+      "Q1": 45.8814,
+      "Q2": 454.6226,
+      "Q3": 79.5264,
+      "Q4": 724.3428,
+      "Q5": 413.8334,
+      "Q6": 339.2116
+    }
+  },
+  {
+    "stage": 2,
+    "transaction_rows": 339399,
+    "relation_bytes": 135094272,
+    "database_bytes": 143671823,
+    "load_seconds": 3.2401345999969635,
+    "validation": {
+      "Q1_rows": 48,
+      "Q2_rows": 85,
+      "Q3_rows": 129,
+      "Q4_rows": 119,
+      "Q5_rows": 29,
+      "Q6_rows": 20,
+      "q5_towns_above_budget": 21,
+      "all_sale_towns": 27,
+      "q2_transaction_total": 339399,
+      "nearest_block_rows": 8302,
+      "q1_transaction_total": 77877
+    },
+    "mean_execution_ms": {
+      "Q1": 51.806400000000004,
+      "Q2": 545.4578,
+      "Q3": 90.8512,
+      "Q4": 926.376,
+      "Q5": 600.5008,
+      "Q6": 465.3308
+    }
+  },
+  {
+    "stage": 3,
+    "transaction_rows": 376552,
+    "relation_bytes": 143302656,
+    "database_bytes": 151880207,
+    "load_seconds": 0.7951276999956463,
+    "validation": {
+      "Q1_rows": 48,
+      "Q2_rows": 91,
+      "Q3_rows": 136,
+      "Q4_rows": 125,
+      "Q5_rows": 35,
+      "Q6_rows": 20,
+      "q5_towns_above_budget": 23,
+      "all_sale_towns": 27,
+      "q2_transaction_total": 376552,
+      "nearest_block_rows": 8510,
+      "q1_transaction_total": 77877
+    },
+    "mean_execution_ms": {
+      "Q1": 53.2492,
+      "Q2": 577.208,
+      "Q3": 97.64059999999999,
+      "Q4": 1003.7504,
+      "Q5": 622.1518,
+      "Q6": 492.8768
+    }
+  },
+  {
+    "stage": 4,
+    "transaction_rows": 617120,
+    "relation_bytes": 195657728,
+    "database_bytes": 204235279,
+    "load_seconds": 3.5000669000146445,
+    "validation": {
+      "Q1_rows": 48,
+      "Q2_rows": 101,
+      "Q3_rows": 249,
+      "Q4_rows": 131,
+      "Q5_rows": 59,
+      "Q6_rows": 20,
+      "q5_towns_above_budget": 26,
+      "all_sale_towns": 27,
+      "q2_transaction_total": 617120,
+      "nearest_block_rows": 9811,
+      "q1_transaction_total": 77877
+    },
+    "mean_execution_ms": {
+      "Q1": 69.6338,
+      "Q2": 881.4682,
+      "Q3": 156.1856,
+      "Q4": 1517.9062,
+      "Q5": 992.3788,
+      "Q6": 687.9134
+    }
+  },
+  {
+    "stage": 5,
+    "transaction_rows": 986771,
+    "relation_bytes": 245407744,
+    "database_bytes": 253985295,
+    "load_seconds": 3.6325266000058036,
+    "validation": {
+      "Q1_rows": 48,
+      "Q2_rows": 102,
+      "Q3_rows": 369,
+      "Q4_rows": 131,
+      "Q5_rows": 56,
+      "Q6_rows": 20,
+      "q5_towns_above_budget": 26,
+      "all_sale_towns": 27,
+      "q2_transaction_total": 986771,
+      "nearest_block_rows": 9817,
+      "q1_transaction_total": 77877
+    },
+    "mean_execution_ms": {
+      "Q1": 83.9232,
+      "Q2": 1583.6653999999999,
+      "Q3": 235.4914,
+      "Q4": 2292.194,
+      "Q5": 1435.239,
+      "Q6": 841.2296
+    }
+  }
+]

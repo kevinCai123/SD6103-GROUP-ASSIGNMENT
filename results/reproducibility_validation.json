@@ -1,0 +1,12 @@
+{
+  "seven_csvs_byte_identical": true,
+  "sha256": {
+    "block_hawker_distance.csv": "f1b4e8e4a80a3e43d451021f162e8fc196e93de6a08ad37bb828f98b590d47db",
+    "hawker_centre.csv": "64efa265b408aac76e7adeee5d48fb75731214245159d895c9c2f141394fb07f",
+    "hdb_block.csv": "6d95f0b3b2abe644827574ba281201cf0e8b086c9b12373469e15c199dd55a43",
+    "hdb_flat.csv": "334c1f0986bff18095cf82820915ba245b9835d4052794b9e8bf920b59de2358",
+    "resale_transaction.csv": "fadbdf7bcb6b1fcb57e82af52e7854bea622b19f73014f6233f25de6ce83afc0",
+    "source_file.csv": "eec26a8e48dd10cb826d06b793e133a65d36a6d69f66e5c4be369c01af35ad6c",
+    "town.csv": "5ffc39040a9512bf5a5e02ef7e3ee53400001ef7b35cc2d8bc37bfb27f08f7a3"
+  }
+}

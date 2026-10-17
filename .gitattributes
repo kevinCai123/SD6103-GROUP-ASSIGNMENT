@@ -1,0 +1,15 @@
+# Keep documentation and Python source consistent across platforms.
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Preserve recorded SQL hashes, exported evidence, and generated results exactly.
+*.sql -text
+*.json -text
+*.html -text
+*.csv -text
+*.png binary
+*.pdf binary
+*.xlsx binary

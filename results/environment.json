@@ -1,0 +1,21 @@
+{
+  "postgresql_version": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35226, 64-bit",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "logical_processors": 20,
+  "started_utc": "2026-09-16T19:26:48.704273+00:00",
+  "settings": {
+    "block_size": "8192",
+    "effective_cache_size": "524288",
+    "fsync": "on",
+    "jit": "off",
+    "max_parallel_workers_per_gather": "0",
+    "server_encoding": "UTF8",
+    "shared_buffers": "16384",
+    "work_mem": "32768"
+  },
+  "warmup_runs": 1,
+  "measured_runs": 5,
+  "metric": "EXPLAIN ANALYZE server Execution Time in milliseconds; per-node timing disabled",
+  "query_sha256": "de7e6a3f687b8d2d617e292228ce2cd0d88ef2dec9e8127eec340174d52f53b8"
+}

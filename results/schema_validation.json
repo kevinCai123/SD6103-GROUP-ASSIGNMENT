@@ -1,0 +1,7 @@
+{
+  "postgresql_version": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35226, 64-bit",
+  "behavioural_assertions": 16,
+  "expected_constraint_rejections": 24,
+  "passed": true,
+  "fixtures_rolled_back": true
+}

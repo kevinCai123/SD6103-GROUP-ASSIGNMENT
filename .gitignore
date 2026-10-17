@@ -1,0 +1,34 @@
+# Local source snapshots and generated database tables
+/data/
+/results_recorded/
+
+# Reports and course materials stay outside this code/results repository
+/*.tex
+/*.pdf
+/*.zip
+/Lectures/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+connection.json
+password.txt
+.pgpass
+pgpass.conf
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editor and temporary files
+.vscode/
+.idea/
+~$*
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
