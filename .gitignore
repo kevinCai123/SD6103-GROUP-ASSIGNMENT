@@ -1,5 +1,4 @@
-# Local source snapshots and generated database tables
-/data/
+# Outputs from repeat experiments
 /results_recorded/
 
 # Reports and course materials stay outside this code/results repository
