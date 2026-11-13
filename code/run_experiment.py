@@ -30,7 +30,7 @@ MEASUREMENT_FIELDS = ['phase','stage','transaction_rows','relation_bytes','datab
 
 def queries(): 
 
-    source = (ROOT/'sql/03_Queries.sql').read_text(encoding='utf-8')
+    source = (ROOT/'SupplementaryTask3/03_Queries.sql').read_text(encoding='utf-8')
     pieces = re.split(r'-- QUERY (Q[1-6])\s*\n', source)
     return {pieces[i]:pieces[i+1].strip() for i in range(1,len(pieces),2)}
 
@@ -205,7 +205,7 @@ def main():
     with psycopg.connect(args.dsn, **connect, autocommit=True) as connection:
         configure(connection) 
 
-        schema = (ROOT/'sql/01_Create_Database.sql').read_text(encoding='utf-8')
+        schema = (ROOT/'SupplementaryTask1/01_Create_Database.sql').read_text(encoding='utf-8')
         schema = schema[schema.index('\nBEGIN;'):]
         connection.execute(schema) 
 
@@ -215,7 +215,7 @@ def main():
                            settings=dict(connection.execute("SELECT name,setting FROM pg_settings WHERE name IN ('work_mem','shared_buffers','max_parallel_workers_per_gather','jit','effective_cache_size','fsync','block_size','server_encoding','lc_collate','lc_ctype')").fetchall()),
                            warmup_runs=1, measured_runs=5,
                            metric='EXPLAIN ANALYZE server Execution Time in milliseconds; per-node timing disabled',
-                           query_sha256=hashlib.sha256((ROOT/'sql/03_Queries.sql').read_bytes()).hexdigest()) 
+                           query_sha256=hashlib.sha256((ROOT/'SupplementaryTask3/03_Queries.sql').read_bytes()).hexdigest()) 
         
         write_json(output/'environment.json', environment)
         query_map = queries()

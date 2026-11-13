@@ -1,3 +1,5 @@
+> Reorganized copy: SQL is split across SupplementaryTask1–4 using the proposed mapping, not verified against the assignment brief. Keep code/, data/, results/, and report_figures/ at this root. Run commands from this root. See REPLACEMENT_GUIDE.md. This is a runnable project package, not the final submission ZIP: the combined report and official group name are still required.
+
 # SD6103 Group Assignment — Assignment 1
 
 Python and PostgreSQL code, frozen datasets, query outputs, and measured performance results for the HDB resale and hawker-centre database assignment.
@@ -11,11 +13,11 @@ The recorded experiment used PostgreSQL 18.4 on Windows and **986,771 resale tra
 | [code/](code/) | Source download, data preparation, benchmark, independent validation, and plotting scripts |
 | [data/raw/](data/raw/) | Eight frozen source CSVs acquired on 17 September 2026 (Singapore time), plus their source/hash manifest |
 | [data/prepared/](data/prepared/) | Seven ready-to-load database CSVs and the five-stage loading plan |
-| [sql/01_Create_Database.sql](sql/01_Create_Database.sql) | Database, seven tables, constraints, functions, and views |
-| [sql/02_Load_Data.sql](sql/02_Load_Data.sql) | Optional full-database CSV loader for psql |
-| [sql/03_Queries.sql](sql/03_Queries.sql) | Queries Q1–Q6; Q6 joins all seven stored tables |
-| [sql/04_Create_Indexes.sql](sql/04_Create_Indexes.sql) | Four performance indexes |
-| [sql/05_Validate_Schema.sql](sql/05_Validate_Schema.sql) | Checks for an empty schema; fixtures are rolled back |
+| [SupplementaryTask1/01_Create_Database.sql](SupplementaryTask1/01_Create_Database.sql) | Database, seven tables, constraints, functions, and views |
+| [SupplementaryTask2/02_Load_Data.sql](SupplementaryTask2/02_Load_Data.sql) | Optional full-database CSV loader for psql |
+| [SupplementaryTask3/03_Queries.sql](SupplementaryTask3/03_Queries.sql) | Queries Q1–Q6; Q6 joins all seven stored tables |
+| [SupplementaryTask4/04_Create_Indexes.sql](SupplementaryTask4/04_Create_Indexes.sql) | Four performance indexes |
+| [SupplementaryTask1/05_Validate_Schema.sql](SupplementaryTask1/05_Validate_Schema.sql) | Checks for an empty schema; fixtures are rolled back |
 | [results/queries/](results/queries/) | Complete outputs at all five sizes and after indexing |
 | [results/plans/](results/plans/) | EXPLAIN ANALYZE JSON plans and buffer statistics |
 | [results/](results/) | Individual timings, summaries, environment, and validation evidence |
@@ -92,10 +94,10 @@ The committed workbook summarizes the recorded experiment. It is not regenerated
 The prepared CSVs are already included, so no download or Python preparation is required for this option. From the repository root, run the following as an alternative to the experiment runner:
 
 ```powershell
-psql -U postgres -d postgres -f sql/01_Create_Database.sql
-psql -U postgres -d sd6103_hdb_hawker -f sql/02_Load_Data.sql
-psql -U postgres -d sd6103_hdb_hawker -f sql/03_Queries.sql
-psql -U postgres -d sd6103_hdb_hawker -f sql/04_Create_Indexes.sql
+psql -U postgres -d postgres -f SupplementaryTask1/01_Create_Database.sql
+psql -U postgres -d sd6103_hdb_hawker -f SupplementaryTask2/02_Load_Data.sql
+psql -U postgres -d sd6103_hdb_hawker -f SupplementaryTask3/03_Queries.sql
+psql -U postgres -d sd6103_hdb_hawker -f SupplementaryTask4/04_Create_Indexes.sql
 ```
 
 Creation fails if the database already exists, and the loader expects empty tables. After loading, `SELECT count(*) FROM housing.resale_transaction;` should return **986771**. The setup and load files contain psql backslash commands. For pgAdmin, create the database separately, reconnect, and execute the schema's BEGIN-to-COMMIT section; the Python runner provides an alternative COPY interface.

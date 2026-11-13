@@ -23,7 +23,7 @@ def main():
     args = parser.parse_args()
     connection_args = json.loads(args.connection_file.read_text()) if args.connection_file else {}
     connection_args['dbname'] = args.database
-    source = (ROOT/'sql/04_Create_Indexes.sql').read_text()
+    source = (ROOT/'SupplementaryTask4/04_Create_Indexes.sql').read_text()
     parts = re.split(r'-- INDEX (I\d) (\w+) (Q\d)\s*\n',source)
     candidates = [(parts[i],parts[i+1],parts[i+2],parts[i+3].strip()) for i in range(1,len(parts),4)]
     output = ROOT/'results'

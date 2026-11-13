@@ -1,6 +1,6 @@
 -- Optional full-database loader for psql, as an alternative to the experiment runner.
 -- Run from the PACKAGE ROOT so the relative CSV paths resolve correctly.
--- Start with the empty database created by sql/01_Create_Database.sql.
+-- Start with the empty database created by SupplementaryTask1/01_Create_Database.sql.
 -- Do not use this loader before run_experiment.py: that script creates its own DB
 -- and loads five incremental sizes, which is required for the timing experiment.
 \set ON_ERROR_STOP on

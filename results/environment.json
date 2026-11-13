@@ -1,9 +1,9 @@
 {
-  "postgresql_version": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35226, 64-bit",
+  "postgresql_version": "PostgreSQL 17.5 on x86_64-windows, compiled by msvc-19.43.34808, 64-bit",
   "platform": "Windows-11-10.0.26200-SP0",
-  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
   "logical_processors": 20,
-  "started_utc": "2026-09-16T19:26:48.704273+00:00",
+  "started_utc": "2026-11-13T09:55:27.258120+00:00",
   "settings": {
     "block_size": "8192",
     "effective_cache_size": "524288",
@@ -17,5 +17,5 @@
   "warmup_runs": 1,
   "measured_runs": 5,
   "metric": "EXPLAIN ANALYZE server Execution Time in milliseconds; per-node timing disabled",
-  "query_sha256": "de7e6a3f687b8d2d617e292228ce2cd0d88ef2dec9e8127eec340174d52f53b8"
+  "query_sha256": "d334a07b17a881a8c6f4e051caf757f40d61fe3a9b939b91428278008c0d8d24"
 }
