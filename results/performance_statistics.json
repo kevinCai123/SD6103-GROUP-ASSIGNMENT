@@ -1,0 +1,149 @@
+{
+  "minimum_attainable_p": 0.0079,
+  "growth": [
+    {
+      "query": "Q1",
+      "ms_per_100k_sales": 5.33,
+      "intercept_ms": 33.12,
+      "r_squared": 0.9762,
+      "growth_factor": 1.83,
+      "sales_factor": 3.44
+    },
+    {
+      "query": "Q2",
+      "ms_per_100k_sales": 158.95,
+      "intercept_ms": -20.28,
+      "r_squared": 0.99,
+      "growth_factor": 3.48,
+      "sales_factor": 3.44
+    },
+    {
+      "query": "Q3",
+      "ms_per_100k_sales": 22.48,
+      "intercept_ms": 14.74,
+      "r_squared": 0.9993,
+      "growth_factor": 2.96,
+      "sales_factor": 3.44
+    },
+    {
+      "query": "Q4",
+      "ms_per_100k_sales": 217.61,
+      "intercept_ms": 158.26,
+      "r_squared": 0.9966,
+      "growth_factor": 3.16,
+      "sales_factor": 3.44
+    },
+    {
+      "query": "Q5",
+      "ms_per_100k_sales": 139.4,
+      "intercept_ms": 85.99,
+      "r_squared": 0.985,
+      "growth_factor": 3.47,
+      "sales_factor": 3.44
+    },
+    {
+      "query": "Q6",
+      "ms_per_100k_sales": 66.26,
+      "intercept_ms": 219.8,
+      "r_squared": 0.9329,
+      "growth_factor": 2.48,
+      "sales_factor": 3.44
+    }
+  ],
+  "stage_increments": [
+    {
+      "stages": "1->2",
+      "sales_change_percent": 18.2,
+      "distance_pair_change_percent": 45.0,
+      "runtime_change_percent": {
+        "Q1": 12.9,
+        "Q2": 20.0,
+        "Q3": 14.2,
+        "Q4": 27.9,
+        "Q5": 45.1,
+        "Q6": 37.2
+      }
+    },
+    {
+      "stages": "4->5",
+      "sales_change_percent": 59.9,
+      "distance_pair_change_percent": 0.1,
+      "runtime_change_percent": {
+        "Q1": 20.5,
+        "Q2": 79.7,
+        "Q3": 50.8,
+        "Q4": 51.0,
+        "Q5": 44.6,
+        "Q6": 22.3
+      }
+    }
+  ],
+  "combined_indexes": [
+    {
+      "query": "Q1",
+      "baseline_mean_ms": 83.92,
+      "indexed_mean_ms": 63.43,
+      "permutation_p": 0.0079
+    },
+    {
+      "query": "Q2",
+      "baseline_mean_ms": 1583.67,
+      "indexed_mean_ms": 1573.78,
+      "permutation_p": 0.2619
+    },
+    {
+      "query": "Q3",
+      "baseline_mean_ms": 235.49,
+      "indexed_mean_ms": 174.25,
+      "permutation_p": 0.0079
+    },
+    {
+      "query": "Q4",
+      "baseline_mean_ms": 2292.19,
+      "indexed_mean_ms": 2098.47,
+      "permutation_p": 0.0079
+    },
+    {
+      "query": "Q5",
+      "baseline_mean_ms": 1435.24,
+      "indexed_mean_ms": 1288.93,
+      "permutation_p": 0.0079
+    },
+    {
+      "query": "Q6",
+      "baseline_mean_ms": 841.23,
+      "indexed_mean_ms": 690.18,
+      "permutation_p": 0.0079
+    }
+  ],
+  "isolated_indexes": [
+    {
+      "index": "I1",
+      "query": "Q1",
+      "baseline_mean_ms": 83.92,
+      "index_alone_mean_ms": 58.74,
+      "permutation_p": 0.0079
+    },
+    {
+      "index": "I2",
+      "query": "Q3",
+      "baseline_mean_ms": 235.49,
+      "index_alone_mean_ms": 227.77,
+      "permutation_p": 0.0794
+    },
+    {
+      "index": "I3",
+      "query": "Q3",
+      "baseline_mean_ms": 235.49,
+      "index_alone_mean_ms": 181.15,
+      "permutation_p": 0.0079
+    },
+    {
+      "index": "I4",
+      "query": "Q4",
+      "baseline_mean_ms": 2292.19,
+      "index_alone_mean_ms": 2073.73,
+      "permutation_p": 0.0079
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "geo_only_centres": [
+    "Anchorvale Village Hawker Centre",
+    "Buangkok Hawker Centre",
+    "Bukit Batok West Hawker Centre",
+    "Bukit Canberra Hawker Centre",
+    "Bukit Panjang Hawker Centre",
+    "Bukit Timah Interim Hawker Centre and Market",
+    "Chong Pang Hawker Centre & Market",
+    "Ci Yuan Hawker Centre",
+    "Fernvale Hawker Centre & Market",
+    "Hawker Centre @ Our Tampines Hub",
+    "Jurong West Hawker Centre",
+    "Kampung Admiralty Hawker Centre",
+    "Margaret Drive Hawker Centre",
+    "Market Street Hawker Centre",
+    "Marsiling Mall Hawker Centre",
+    "One Punggol Hawker Centre",
+    "Pasir Ris Central Hawker Centre",
+    "Punggol Coast Hawker Centre",
+    "Senja Hawker Centre",
+    "Tampines North Hawker Centre",
+    "Tanglin Halt Hawker Centre & Market",
+    "Telok Blangah Hawker Centre & Market",
+    "Woodleigh Village Hawker Centre",
+    "Yew Tee Hawker Centre",
+    "Yishun Park Hawker Centre"
+  ],
+  "geo_only_centre_count": 25,
+  "geocoded_sales": 971501,
+  "sales_changing_class": 275087,
+  "far_sales_submitted": 482315,
+  "far_sales_with_geo_only": 214907,
+  "towns_all_far_submitted": [
+    "BUKIT PANJANG",
+    "CHOA CHU KANG",
+    "PUNGGOL",
+    "SEMBAWANG",
+    "SENGKANG"
+  ],
+  "q4_all_years": {
+    "submitted": {
+      "town_flat_type_rows": 131,
+      "comparable_rows": 53,
+      "positive": 11,
+      "negative": 42,
+      "median_difference_percent": -8.99
+    },
+    "with_geo_only": {
+      "town_flat_type_rows": 131,
+      "comparable_rows": 74,
+      "positive": 41,
+      "negative": 33,
+      "median_difference_percent": 2.11
+    }
+  },
+  "q4_from_2017": {
+    "submitted": {
+      "town_flat_type_rows": 131,
+      "comparable_rows": 53,
+      "positive": 16,
+      "negative": 37,
+      "median_difference_percent": -8.44
+    },
+    "with_geo_only": {
+      "town_flat_type_rows": 131,
+      "comparable_rows": 74,
+      "positive": 44,
+      "negative": 30,
+      "median_difference_percent": 2.75
+    }
+  }
+}
