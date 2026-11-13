@@ -28,64 +28,84 @@ def fetch(url, path=None):
                '--user-agent', 'Mozilla/5.0 SD6103 academic data loader']
     if path:
         command += ['--output', str(path)]
+
     command.append(url)
     result = subprocess.run(command, check=True, capture_output=True)
+
     return result.stdout
 
 def describe(path, url, metadata=None):
+
     with path.open(encoding='utf-8-sig', newline='') as stream:
         reader = csv.reader(stream)
         header = next(reader)
         rows = sum(1 for _ in reader)
+
     return dict(file=path.name, source_url=url,
                 retrieved_at=dt.datetime.now(dt.timezone.utc).isoformat(),
+
                 sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                 bytes=path.stat().st_size, rows=rows, columns=header,
+
                 metadata=metadata)
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=Path(__file__).resolve().parents[1] / 'data/raw')
     parser.add_argument('--hawker-geo', type=Path)
+
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
-    manifest_path = args.output / 'sources.json'
-    manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
+    manifest_path = args.output / 'sources.json' 
+
+    manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {} 
+
     for dataset_id in DATASETS:
         filename = dataset_id + '.csv'
-        target = args.output / filename
+        target = args.output / filename 
+
         if target.exists() and filename in manifest:
             assert hashlib.sha256(target.read_bytes()).hexdigest() == manifest[filename]['sha256']
             print('Using frozen snapshot:', filename, flush=True)
-            continue
+            continue 
+        
         metadata_url = f'https://api-production.data.gov.sg/v2/public/api/datasets/{dataset_id}/metadata'
-        metadata = json.loads(fetch(metadata_url))['data']
+        metadata = json.loads(fetch(metadata_url))['data'] 
+
         base = f'https://api-open.data.gov.sg/v1/public/api/datasets/{dataset_id}'
-        response = json.loads(fetch(base + '/initiate-download'))
+        response = json.loads(fetch(base + '/initiate-download')) 
+
         download_url = response.get('data', {}).get('url')
         while not download_url:
             time.sleep(15)
             response = json.loads(fetch(base + '/poll-download'))
-            download_url = response.get('data', {}).get('url')
+            download_url = response.get('data', {}).get('url') 
+
         fetch(download_url, target)
-        manifest[filename] = describe(target, f'https://data.gov.sg/datasets/{dataset_id}/view', metadata)
-        manifest_path.write_text(json.dumps(manifest, indent=2), encoding='utf-8')
+        manifest[filename] = describe(target, f'https://data.gov.sg/datasets/{dataset_id}/view', metadata) 
+        manifest_path.write_text(json.dumps(manifest, indent=2), encoding='utf-8') 
+
         print(metadata['name'], ':', manifest[filename]['rows'], 'rows', flush=True)
         time.sleep(15)  # Respect the unauthenticated public download quota.
 
     filename = 'hdb_geo.csv'
     target = args.output / filename
-    url = 'https://raw.githubusercontent.com/BlueSkyLT/siteselect_sg/main/dataset/hdb.csv'
+    url = 'https://raw.githubusercontent.com/BlueSkyLT/siteselect_sg/main/dataset/hdb.csv' 
+    
     if not target.exists():
         fetch(url, target)
-        manifest[filename] = describe(target, url)
+        manifest[filename] = describe(target, url) 
+
     if args.hawker_geo:
-        shutil.copyfile(args.hawker_geo, args.output / 'hawker_geo.csv')
-    target = args.output / 'hawker_geo.csv'
+        shutil.copyfile(args.hawker_geo, args.output / 'hawker_geo.csv') 
+    target = args.output / 'hawker_geo.csv' 
+
     if not target.exists():
-        raise FileNotFoundError('Provide the course hawker_geo.csv using --hawker-geo.')
+        raise FileNotFoundError('Provide the course hawker_geo.csv using --hawker-geo.') 
+    
     if 'hawker_geo.csv' not in manifest:
-        manifest['hawker_geo.csv'] = describe(target, 'NTULearn: supplied hawker_geo.csv')
+        manifest['hawker_geo.csv'] = describe(target, 'NTULearn: supplied hawker_geo.csv') 
+
     manifest_path.write_text(json.dumps(manifest, indent=2), encoding='utf-8')
     print('Downloaded and fingerprinted all eight source CSV files.', flush=True)
 
